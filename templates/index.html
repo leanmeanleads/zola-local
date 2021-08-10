@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{% if lang %}{{ lang }}{% else %}en{% endif %}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta name="description" content="{{ config.description }}">
+
+    <link rel="stylesheet" href="/assets/css/theme.css" type="text/css" media="all">
+
+    <meta name="ahrefs-site-verification" content="eb471728e533800e779b7102dcd552781fa6c04e5cb16c04814c0bffff775e61">
+
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+
+<body>
+    {% include "partials/_nav.html" %}
+
+    {% include "partials/_header.html" %}
+
+    <main id="main" tabindex="-1">
+        {% block content %}
+{{ section.content | safe }}
+        {% endblock content %}
+    </main>
+
+    {% include "partials/_footer.html" %}
+    
+    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+</body>
+
+</html>

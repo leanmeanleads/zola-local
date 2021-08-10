@@ -1,0 +1,8 @@
+<div class="col mb-3 mb-lg-0 mr-lg-4">
+  <div class="pr-lg-7">
+    {{ body | markdown | safe }} <br>
+    {% if cta %}
+    <a class="btn btn-lg btn-primary btn-block" href="tel:01257444035">{{ cta }}</a>
+    {% endif %}
+  </div>
+</div>
