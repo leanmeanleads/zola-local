@@ -1,4 +1,6 @@
+{% import "macros/index.html" as home_macros %}
+
 {{ body | markdown | safe }} <br>
 {% if cta %}
-<a class="btn btn-lg btn-primary btn-block" href="tel:01257444035">{{ cta }}</a>
+{{ home_macros::phone_button(cta=cta)}}
 {% endif %}

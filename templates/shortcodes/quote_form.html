@@ -36,24 +36,12 @@
         </div>
 
         <div class="form-group">
+          {% for service in config.extra.services %}
           <label>
-            <input type="checkbox" name="services[]" value="Carpet Cleaning" /> Carpet Cleaning
+            <input type="checkbox" name="services[]" value="{{ service }}" /> {{ service }}
           </label>
           <br />
-          <label>
-            <input type="checkbox" name="services[]" value="Tile and Grout Cleaning" /> Tile and
-            Grout Cleaning
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" name="services[]" value="Upholstery Cleaning" /> Upholstery
-            Cleaning
-          </label>
-          <br />
-          <label>
-            <input type="checkbox" name="services[]" value="Pet Stains and Odour Removal" /> Pet
-            Stains and Odour Removal
-          </label>
+          {% endfor %}
         </div>
 
         <div class="row">
@@ -72,7 +60,7 @@
   {% if image_under %}
   <div class="row mt-3 mb-3">
     <div class="col">
-      {% set image_under = resize_image(path="images/carpet-cleaning-near-curtains.jpg", op="fill", width=400, height=400,
+      {% set image_under = resize_image(path="images/" ~ image_under, op="fill", width=400, height=400,
       format="jpg", quality=30) %}
       <img src="{{ image_under.url | safe }}" alt="Image" class="rounded">
     </div>

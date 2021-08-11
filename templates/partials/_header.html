@@ -2,16 +2,15 @@
   {% if page and page.extra.image_name %}
   {% set header_image = resize_image(path="images/" ~ page.extra.image_name, op="fill", width=1000, height=400, format="jpg", quality=40) %}
   {% else %}
-  {% set header_image = resize_image(path="images/cleaning-a-sofa.jpg", op="fill", width=1000, height=300, format="jpg", quality=40) %}
+  {% set header_image = resize_image(path="images/" ~ config.extra.heading_image, op="fill", width=1000, height=300, format="jpg", quality=40) %}
   {% endif %}
   {% set header_image_url = header_image.url %}
   <img src="{{ header_image_url | safe }}" alt="Image" class="bg-image opacity-60">
   <div class="container">
     <div class="row text-center">
       <div class="col">
-        <h1 class="display-4 text-white">{{ config.extra.town }} Carpet Cleaning</h1>
-        <h2 class="display-2 text-white"><a href="tel:01257444035" class="text-white">(01257) 444 035</a>
-        </h2>
+        <h1 class="display-4 text-white">{{ config.extra.town }} {{ config.extra.trade }}</h1>
+        <h2 class="display-2 text-white">{{ home_macros::phone_link() }}</h2>
       </div>
     </div>
   </div>
