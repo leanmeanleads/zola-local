@@ -4,7 +4,7 @@
             <div class="col-xl-12">
                 {% set page_break_image = resize_image(path="images/" ~ image, op="fill",
                 width=1200, height=400, format="jpg", quality=40) %}
-                <img src="{{ page_break_image.url | safe }}" alt="Image" class="rounded shadow-lg">
+                <img src="{{ page_break_image.url | safe }}" alt="{{ description }}" class="rounded shadow-lg">
             </div>
         </div>
     </div>

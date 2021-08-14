@@ -1,5 +1,5 @@
 <div class="col-md-5 offset-lg-1">
     <h2 class="h3 d-block">{{ town | default(value=config.extra.town)}}, {{ config.extra.county }}</h2>
     <img src="https://maps.googleapis.com/maps/api/staticmap?center={{ town | default(value=config.extra.town) }},{{ config.extra.county }}&zoom=14&size=400x400&key=AIzaSyBBSoLYe1eDWpVm9xd_5Q4zXWYkY86p2qg"
-        class="rounded shadow-lg">
+        alt="{{ town | default(value=config.extra.town)}}, {{ config.extra.county }}" class="rounded shadow-lg">
 </div>

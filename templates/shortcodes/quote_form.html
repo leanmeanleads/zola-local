@@ -62,7 +62,7 @@
     <div class="col">
       {% set image_under = resize_image(path="images/" ~ image_under, op="fill", width=400, height=400,
       format="jpg", quality=30) %}
-      <img src="{{ image_under.url | safe }}" alt="Image" class="rounded">
+      <img src="{{ image_under.url | safe }}" alt="{{ image_description }}" class="rounded">
     </div>
   </div>
   {% endif %}
