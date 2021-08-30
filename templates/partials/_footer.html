@@ -8,16 +8,11 @@
       </div>
       <div class="col-12 col-md-auto">
         <ul class="list-unstyled d-md-flex mb-0">
-          <li class="mx-md-2"><a href="#" class="text-white">Residential Roof Repairs</a>
+          {% for service in config.extra.services %}
+          <li class="mx-md-2">
+            <a href="#" class="text-white">{{ service }}</a>
           </li>
-          <li class="mx-md-2"><a href="#" class="text-white">Residential Roof Replacement</a>
-          </li>
-          <li class="mx-md-2"><a href="#" class="text-white">Commercial Roof Repairs</a>
-          </li>
-          <li class="mx-md-2"><a href="#" class="text-white">Commercial Roof Replacement</a>
-          </li>
-          <li class="mx-md-2"><a href="#" class="text-white">Gutters</a>
-          </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
