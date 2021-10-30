@@ -8,7 +8,15 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
 
-    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <title>
+        {% block title %}
+        {% if page.title %}
+            {{ page.title  }} | {{ config.extra.niche | capitalize }} {{ config.extra.location.town | capitalize }} {{ config.extra.location.state | capitalize}}
+        {% else %}
+            {{ config.title }}
+        {% endif %}
+        {% endblock title %}
+    </title>
     <meta name="description" content="{{ config.description }}">
 
     <link rel="stylesheet" href="/assets/css/theme.css" type="text/css" media="all">
