@@ -22,6 +22,14 @@
             aria-expanded="false" id="pages-dropdown">Services</a>
           <div class="dropdown-menu dropdown-menu-wide p-0 o-hidden" aria-labelledby="pages-dropdown">
             <div class="list-group list-group-flush">
+              <a href="/services" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
+                <div class="d-flex align-items-center">
+                  <div>
+                    <span class="h6 d-block mb-0">All Services</span>
+                  </div>
+                </div>
+                <i class="material-icons">keyboard_arrow_right</i>
+              </a>
               {% set service_section = get_section(path="services/_index.md") %}
               {% for page in service_section.pages %}
               <a href="{{ page.path }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
