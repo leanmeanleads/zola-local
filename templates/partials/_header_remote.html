@@ -1,8 +1,8 @@
 <section class="{% if page and page.extra.image_name %}height-xs-30 height-md-60{% else %}height-xs-30 height-md-40{% endif %} bg-gradient">
   {% if page and page.extra.image_name %}
-  {% set header_image_url = "https://7udfuvi8.twic.pics/images/" ~ page.extra.image_name ~ "?twic=v1/cover=1000x400/q=40" %}
+  {% set header_image_url = "https://7udfuvi8.twic.pics/images/" ~ page.extra.image_name ~ "?twic=v1/cover=1000x400/quality=40" %}
   {% else %}
-  {% set header_image_url = "https://7udfuvi8.twic.pics/images/" ~ config.extra.heading_image ~ "?twic=v1/cover=1000x300/q=40" %}
+  {% set header_image_url = "https://7udfuvi8.twic.pics/images/" ~ config.extra.heading_image ~ "?twic=v1/cover=1000x300/quality=40" %}
   {% endif %}
   <img src="{{ header_image_url | safe }}" alt="Image" class="bg-image opacity-60">
   <div class="container">
