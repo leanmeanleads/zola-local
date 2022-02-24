@@ -51,20 +51,23 @@
             aria-expanded="false" id="pages-dropdown">Locations We Serve</a>
           <div class="dropdown-menu dropdown-menu-wide p-0 o-hidden" aria-labelledby="pages-dropdown">
             <div class="list-group list-group-flush">
-              {% set locations_section = get_section(path="locations-we-serve/_index.md") %}
-              {% for page in locations_section.pages | sort(attribute="extra.order") %}
-
-              <a href="{{ page.path }}"
-                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+              <a href="/locations-we-serve" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
                 <div class="d-flex align-items-center">
                   <div>
-                    <span class="h6 d-block mb-0">{{ page.title }}</span>
+                    <span class="h6 d-block mb-0">All Locations</span>
                   </div>
                 </div>
-                <i class="material-icons">keyboard_arrow_right</i>
               </a>
+              {% set locations_section = get_section(path="locations-we-serve/_index.md") %}
+              {% for page in locations_section.pages | sort(attribute="extra.order") %}
+                <a href="{{ page.permalink }}" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center py-2">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <span class="h6 d-block mb-0">{{ page.title }}</span>
+                    </div>
+                  </div>
+                </a>
               {% endfor %}
-              
             </div>
           </div>
         </li>
