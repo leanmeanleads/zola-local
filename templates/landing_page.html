@@ -1,0 +1,130 @@
+{% extends "index_modular.html" %}
+
+{% block nav %}
+{% endblock nav %}
+
+{% block header %}
+<section class="bg-white">
+  <div class="d-md-flex align-items-center text-center">
+    <div class="row no-gutters justify-content-center w-100 py-3 py-md-4">
+      <div class="col-sm-8 p-3">
+        <h1 class="display-4">Need your Roof Repaired? Replacements, repairs and more!</h1>
+        <p class="lead mb-3">Serving all of phil and surrounding areas. We'll talk about X.</p>
+        <a href="tel:01772123456" class="m-1 px-3 py-2 btn btn-lg btn-primary">Call Now (01772) 123 456</a>
+        <a href="#get-a-free-quote" class="m-1 px-3 py-2 btn btn-lg btn-primary">Get a Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock header %}
+
+{% block content %}
+
+<section class="bg-gray py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-5">Services</h2>
+      </div>
+      <div class="col-md-3 col-6">
+        <a href="#get-a-free-quote" class="card hover-effect">
+          <img class="card-img-top" src="assets/img/card-image-small-1.jpg" alt="Startup">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">Carpet Cleaning</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a href="#get-a-free-quote" class="card hover-effect">
+          <img class="card-img-top" src="assets/img/card-image-small-2.jpg" alt="Small Business">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">Rug Cleaning</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a href="#get-a-free-quote" class="card hover-effect">
+          <img class="card-img-top" src="assets/img/card-image-small-3.jpg" alt="Multinational">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">Tile Cleaning</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-3 col-6">
+        <a href="#get-a-free-quote" class="card hover-effect">
+          <img class="card-img-top" src="assets/img/card-image-small-4.jpg" alt="Non-profit">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">Pet Odour Removal</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray py-3">
+  <div class="container">
+    <div class="row justify-content-center no-gutters flex-fill mb-3">
+      <div class="col-sm-4 d-flex">
+        <img class="d-none d-md-block" src="assets/img/tall-small-1.jpg" alt="Image">
+      </div>
+      <div class="col-sm-8 d-flex flex-column">
+        <div class="p-4">
+          <span class="h2 d-block">How It Works</span>
+          <p class="lead mb-0">
+            We come to you.
+            <ul>
+              <li>We clean your roof.</li>
+              <li>We repair your roof.</li>
+              <li>We replace your roof.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-dark">
+  <img src="assets/img/contact-1.jpg" alt="bg" class="bg-image">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-sm-10">
+        <div class="card mb-0 card-body py-4" id="get-a-free-quote">
+          <h2 class="h2 d-block">Get a Free Quote Today</h2>
+
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="youremail@gmail.com">
+            </div>
+            <div class="form-group">
+              <input type="phone" class="form-control" placeholder="(01772) 123 456">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" rows="4" placeholder="Details of your roof repair"></textarea>
+            </div>
+            <div>
+              <button class="btn btn-primary btn-lg" type="submit">Get In Touch Today</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+{% endblock content %}

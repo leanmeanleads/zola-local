@@ -45,26 +45,23 @@
 
 <body>
     {% block nav %}
-        {% include "partials/_nav.html" %}
+      {% include "partials/_nav.html" %}
     {% endblock nav %}
 
     {% block header %}
-        {% include "partials/_header_remote.html" %}
+      {% include "partials/_header_remote.html" %}
     {% endblock header %}
 
-    <main id="main" tabindex="-1">
-        {% block content %}
-        {{ section.content | safe }}
-        {% endblock content %}
-    </main>
+    {% block content %}
+      {{ section.content | safe }}
+    {% endblock content %}
 
-    {% include "partials/_footer.html" %}
-    
+    {% block footer %}
+      {% include "partials/_footer.html" %}
+    {% endblock footer %}
 
-    <!-- TODO: Enable just the parts we need for interactive menus. -->
-    <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/popper.min.js"></script>
-    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+    {% block body_scripts %}
+    {% endblock body_scripts %}
 </body>
 
 </html>
