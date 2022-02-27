@@ -1,0 +1,30 @@
+{% set examples = load_data(path=path) -%}
+
+<section class="bg-gray pt-1 pb-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="display-5 text-center">Cleaning - Before and After</h2>
+      </div>
+      {% for example in examples %}
+      <div class="col-6 col-md-3 d-flex">
+        <a href="#get-a-free-quote"
+           class="card hover-effect">
+          <img class="card-img-top"
+               src="{{ example.image_path }}"
+               alt="{{ example.caption | safe }}">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <h6 class="mb-0">{{ example.caption | safe }}</h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="row justify-content-center">
+      <a href="tel:{{ config.extra.phone_number.value }}"
+         class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now {{ config.extra.phone_number.display_value }}</a>
+    </div>
+  </div>
+</section>
