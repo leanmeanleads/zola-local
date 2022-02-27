@@ -10,9 +10,9 @@
       <div class="col-sm-8 p-3">
         <h1 class="display-4">Need Your Carpet Cleaned?</h1>
         <p class="lead mb-3">Top Rated Carpet Cleaning in Longridge and Surrounding Areas. We Get Your Carpets Sparkling Clean!</p>
-        <a href="tel:01772123456"
+        <a href="tel:{{ config.extra.phone_number.value }}"
            class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now
-          (01772) 123 456</a>
+          {{ config.extra.phone_number.display_value }}</a>
         <a href="#get-a-free-quote"
            class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-secondary">Get a
           Quote</a>
@@ -168,9 +168,6 @@
           </div>
         </a>
       </div>
-
-
-
       <div class="col-6 col-md-3">
         <a href="#"
            class="card hover-effect">
@@ -197,7 +194,6 @@
           </div>
         </a>
       </div>
-
       <div class="col-6 col-md-3 d-flex">
         <a href="#"
            class="card hover-effect">
@@ -225,6 +221,10 @@
         </a>
       </div>
     </div>
+    <div class="row justify-content-center">
+      <a href="tel:{{ config.extra.phone_number.value }}"
+         class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now {{ config.extra.phone_number.display_value }}</a>
+    </div>
   </div>
 </section>
 
@@ -247,7 +247,7 @@
       </div>
       <div class="col-sm-12 col-md-4">
         <img class="card-img-top"
-             src="images/reviews/review_3.png"
+             src="/images/reviews/review_3.png"
              alt="Big thanks to Mark for coming and cleaning my downstairs carpets. Great communication. excellent service. Really pleased with the results. Highly recommend">
       </div>
       <div class="col-sm-12 col-md-4">
@@ -328,7 +328,7 @@
                           id="details"
                           rows="3"
                           name="details"
-                          placeholder="What service do you want?"></textarea>
+                          placeholder="Details of your cleaning job"></textarea>
               </div>
             </div>
             <div>
@@ -349,9 +349,9 @@
       <div class="col-sm-8 p-3">
         <h2 class="display-4">Need Your Carpet Cleaned?</h2>
         <p class="lead mb-3">Get in Touch Today!</p>
-        <a href="tel:01772123456"
+        <a href="tel:{{ config.extra.phone_number.value }}"
            class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now
-          (01772) 123 456</a>
+          {{ config.extra.phone_number.display_value }}</a>
       </div>
     </div>
   </div>
