@@ -24,137 +24,7 @@
 
 {% block content %}
 
-  {{ page.content | safe }}
-
-
-
-<section class="bg-gray pt-1 pb-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="display-5 text-center">Happy Customers</h2>
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_1.png"
-             alt="Cleaned a full 3 bed terrace house top to bottom, every carpet, kitchen, oven and bathroom. House was spotless, would recommend. Fantastic customer service from Mark.">
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_2.png"
-             alt="Highly recommend Easy Clean. Mark is friendly, reliable and the job is always spot on. great service thank you!!">
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_3.png"
-             alt="Big thanks to Mark for coming and cleaning my downstairs carpets. Great communication. excellent service. Really pleased with the results. Highly recommend">
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_4.png"
-             alt="Just a HUGE a thank you to a Mark and his team for performing a clean on my ex rental property which was left in an appalling state by the last tenants . Excellent communication and very helpful. Highly recommended.">
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_5.png"
-             alt="Just had our living room carpet cleaned. Fabulous job, quick and efficient. Was thinking of buying a new carpet, no need now!">
-      </div>
-      <div class="col-sm-12 col-md-4">
-        <img class="card-img-top"
-             src="/images/reviews/review_6.png"
-             alt="Mark has done a fantastic job on our carpets. He was very quick & efficient. He is also a lovely guy. We will definitely be getting him to do them again in the future. Thanks Mark">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-dark">
-  <img src="/images/contact_image/carpet_cleaning.jpg"
-       alt="Carpet Cleaned - Before And After"
-       class="bg-image">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7 col-sm-10">
-        <div class="card mb-0 card-body py-4"
-             id="get-a-free-quote">
-          <h2 class="h2 d-block">Get a Free Quote Today</h2>
-
-          <form>
-            <div class="form-group row">
-              <label for="name"
-                     class="col-md-2 col-3 col-form-label">Name</label>
-              <div class="col-md-10 col-9">
-                <input type="text"
-                       id="name"
-                       class="form-control"
-                       placeholder="Your Name"
-                       name="name"
-                       required
-                       autocomplete="name">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="email"
-                     class="col-md-2 col-3 col-form-label">Email</label>
-              <div class="col-md-10 col-9">
-                <input type="email"
-                       id="email"
-                       class="form-control"
-                       placeholder="name@example.com"
-                       name="email"
-                       required
-                       autocomplete="email">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="phone"
-                     class="col-md-2 col-3 col-form-label">Phone</label>
-              <div class="col-md-10 col-9">
-                <input type="tel"
-                       id="phone"
-                       class="form-control"
-                       placeholder="(01772) 123 456"
-                       name="phone"
-                       required
-                       autocomplete="tel">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="details"
-                     class="col-md-2 col-3 col-form-label">Details</label>
-              <div class="col-md-10 col-9">
-                <textarea class="form-control"
-                          id="details"
-                          rows="3"
-                          name="details"
-                          placeholder="Details of your cleaning job"></textarea>
-              </div>
-            </div>
-            <div>
-              <button class="btn btn-primary btn-lg col-sm-12"
-                      type="submit">Get In Touch Today</button>
-            </div>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-white py-3">
-  <div class="d-md-flex align-items-center text-center">
-    <div class="row no-gutters justify-content-center w-100 py-0 py-md-2">
-      <div class="col-sm-8 p-3">
-        <h2 class="display-4">Need Your Carpet Cleaned?</h2>
-        <p class="lead mb-3">Get in Touch Today!</p>
-        <a href="tel:{{ config.extra.phone_number.value }}"
-           class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now
-          {{ config.extra.phone_number.display_value }}</a>
-      </div>
-    </div>
-  </div>
-</section>
+{{ page.content | safe }}
 
 {% endblock content %}
 
@@ -162,17 +32,18 @@
 <footer class="bg-dark spacer-y-1">
   <div class="container">
     <div class="row justify-content-between align-items-center mt-3 mt-md-4">
-      <div class="col order-lg-1">
-        <span class="text-small text-white opacity-50">&copy; {{ now() | date(format="%Y") }} {{ config.extra.client.name }} {{ config.extra.client.address }}</span>
+      <div class="col text-white">
+        We serve Longridge and surrounding areas: Preston, Goosnargh, Grimsargh, Balderstone, Ribchester, Samlesbury, Chipping, Inglewhite, Mellor, Hurst Green.
       </div>
-      <div class="col">
+    </div>
+    <div class="row justify-content-between align-items-center px-2 mt-3 mt-md-4">
+        <p class="text-small text-white opacity-50">&copy; {{ now() | date(format="%Y") }} {{ config.extra.client.name }} {{ config.extra.client.address }}</p>
         <ul class="list-unstyled d-flex list-pipe-separator">
           <li><a href="/privacy-policy"
                class="text-white text-small">Privacy Policy</a></li>
           <li><a href="/terms-and-conditions"
                class="text-white text-small">Terms and Conditions</a></li>
         </ul>
-      </div>
     </div>
   </div>
 </footer>

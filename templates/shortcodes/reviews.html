@@ -1,27 +1,23 @@
-<section class="bg-gray pt-1 pb-4">
+{% set reviews = load_data(path=path) -%}
+<section class="bg-gray pt-1 pb-2">
   <div class="container">
-    <div class="row">
+    <div class="row pb-2">
       <div class="col-12">
-        <h2 class="display-5 text-center">Happy Customers</h2>
+        <h2 class="display-5 text-center">{{ heading }}</h2>
       </div>
+      {% for review in reviews %}
       <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_1.png" alt="Startup">
+        <img class="card-img-top"
+             src="{{ review.image_path }}"
+             alt="{{ review.content }}">
       </div>
-      <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_2.png" alt="Small Business">
-      </div>
-      <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_3.png" alt="Multinational">
-      </div>
-      <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_4.png" alt="Non-profit">
-      </div>
-      <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_5.png" alt="Non-profit">
-      </div>
-      <div class="col-sm-12 col-md-4">
-          <img class="card-img-top" src="assets/img/reviews/review_6.png" alt="Non-profit">
-      </div>
+      {% endfor %}
+    </div> 
+    {% if show_phone_cta %}
+    <div class="row justify-content-center">
+      <a href="tel:{{ config.extra.phone_number.value }}"
+         class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now {{ config.extra.phone_number.display_value }}</a>
     </div>
+    {% endif %}
   </div>
 </section>

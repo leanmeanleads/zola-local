@@ -4,7 +4,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="display-5 text-center">Cleaning - Before and After</h2>
+        <h2 class="display-5 text-center">{{ heading }}</h2>
       </div>
       {% for example in examples %}
       <div class="col-6 col-md-3 d-flex">
@@ -22,9 +22,11 @@
       </div>
       {% endfor %}
     </div>
+    {% if show_phone_cta %}
     <div class="row justify-content-center">
       <a href="tel:{{ config.extra.phone_number.value }}"
          class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now {{ config.extra.phone_number.display_value }}</a>
     </div>
+    {% endif %}
   </div>
 </section>
