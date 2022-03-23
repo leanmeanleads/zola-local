@@ -6,7 +6,7 @@
         <h2 class="display-5 text-center">{{ heading }}</h2>
       </div>
       {% for review in reviews %}
-      <div class="col-sm-12 col-md-4">
+      <div class="col-sm-6">
         <img src="https://{{ config.extra.twicpics_id }}.twic.pics/{{ config.extra.cdn_images_base_path }}/{{ review.image_path }}?twic=v1/output=preview"
              class="card-img-top pb-2"
              data-twic-src="image:{{ config.extra.cdn_images_base_path }}/{{ review.image_path }}"
