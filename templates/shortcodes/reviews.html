@@ -8,7 +8,7 @@
       {% for review in reviews %}
       <div class="col-sm-12 col-md-4">
         <img src="https://{{ config.extra.twicpics_id }}.twic.pics/{{ config.extra.cdn_images_base_path }}/{{ review.image_path }}?twic=v1/output=preview"
-             class="card-img-top"
+             class="card-img-top pb-2"
              data-twic-src="image:{{ config.extra.cdn_images_base_path }}/{{ review.image_path }}"
              alt="{{ review.content }}">
       </div>
