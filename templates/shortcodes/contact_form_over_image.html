@@ -10,7 +10,7 @@
              id="get-a-free-quote">
           <h2 class="h2 d-block">{{ heading }}</h2>
 
-          <form name="quote" netlify>
+          <form name="quote" data-netlify="true" action="/thank-you">
             <div class="form-group row">
               <label for="name"
                      class="col-md-2 col-3 col-form-label">Name</label>
@@ -44,7 +44,7 @@
                 <input type="tel"
                        id="phone"
                        class="form-control"
-                       placeholder="(01772) 123 456"
+                       placeholder=""
                        name="phone"
                        required
                        autocomplete="tel">
@@ -58,7 +58,7 @@
                           id="details"
                           rows="3"
                           name="details"
-                          placeholder="Details of your cleaning job"></textarea>
+                          placeholder="Details of your job"></textarea>
               </div>
             </div>
             <div>
