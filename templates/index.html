@@ -38,6 +38,9 @@
         gtag('js', new Date());
 
         gtag('config', '{{ config.extra.google_analytics_id }}');
+        {% if config.extra.google_adwords_id %}
+        gtag('config', '{{ config.extra.google_adwords_id }}');
+        {% endif %}
         </script>
     {% endif %}
     {% endblock extra_head %}
