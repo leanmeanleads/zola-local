@@ -10,12 +10,15 @@
       <div class="col-sm-8 p-3">
         <h1 class="display-4">{{ page.extra.heading }}</h1>
         <p class="lead mb-3">{{ page.extra.subheading }}</p>
+        {% if page.extra.hide_call_to_actions_in_hero %}
+        {% else %}
         <a href="tel:{{ config.extra.phone_number.value }}"
            class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now
           {{ config.extra.phone_number.display_value }}</a>
         <a href="#get-a-free-quote"
            class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-secondary">Get a
           Quote</a>
+        {% endif %}
       </div>
     </div>
   </div>
