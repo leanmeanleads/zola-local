@@ -14,6 +14,7 @@
           <img src="https://{{ config.extra.twicpics_id }}.twic.pics/{{ config.extra.cdn_images_base_path }}/{{ example.image_path }}?twic=v1/output=preview"
                class="card-img-top"
                data-twic-src="image:{{ config.extra.cdn_images_base_path }}/{{ example.image_path }}"
+               data-twic-transform="cover=600x600"
                alt="{{ example.caption | safe }}">
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center">
