@@ -10,6 +10,9 @@
       <div class="col">
         <h1 class="display-4 text-white">{{ config.extra.niche }} {{ config.extra.town }} {{config.extra.state }}</h1>
         <h2 class="display-4 text-white pt-2" style="text-decoration: underline;">{{ home_macros::phone_link() }}</h2>
+        {% if config.extra.show_client_name %}
+          <h2 class="display-6 text-white mt-4">On behalf of {{ config.extra.client.name }}, {{ config.extra.town }}</h2>
+        {% endif %}
       </div>
     </div>
   </div>
