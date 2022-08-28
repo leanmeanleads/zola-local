@@ -32,6 +32,21 @@
 {% endblock content %}
 
 {% block footer %}
+
+{% if config.extra.clients and page.extra.work %}
+  {% for client in config.extra.clients %}
+    {% if client.work == page.extra.work %}
+      {% set client_name = client.name %}
+      {% set client_address = client.address %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if not client_name %}
+  {% set client_name = config.extra.client.name %}
+  {% set client_address = config.extra.client.address %}
+{% endif %}
+
 <footer class="bg-dark spacer-y-1">
   <div class="container">
     <div class="row justify-content-between align-items-center mt-3 mt-md-4">
@@ -40,7 +55,7 @@
       </div>
     </div>
     <div class="row justify-content-between align-items-center px-2 mt-3 mt-md-4">
-        <p class="text-small text-white opacity-50">&copy; {{ now() | date(format="%Y") }} {{ config.extra.client.name }} {{ config.extra.client.address }}, {{ config.extra.google_ads_tracking_number }}</p>
+        <p class="text-small text-white opacity-50">&copy; {{ now() | date(format="%Y") }} {{ client_name }} {{ client_address }}, {{ config.extra.google_ads_tracking_number }}</p>
         <ul class="list-unstyled d-flex list-pipe-separator">
           <li><a href="/privacy-policy"
                class="text-white text-small">Privacy Policy</a></li>

@@ -1,3 +1,7 @@
+{% if config.extra.clients and page.extra.work %}
+  {% set path = path | replace(from="data/", to="data/" ~ page.extra.work ~ "/" ) -%}
+{% endif %}
+
 {% set reviews = load_data(path=path) -%}
 <section class="bg-gray pt-1 pb-2">
   <div class="container">

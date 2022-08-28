@@ -1,5 +1,8 @@
-{% set examples = load_data(path=path) -%}
+{% if config.extra.clients and page.extra.work %}
+  {% set path = path | replace(from="data/", to="data/" ~ page.extra.work ~ "/" ) -%}
+{% endif %}
 
+{% set examples = load_data(path=path) -%}
 
 <section class="bg-gray pt-1 pb-4">
   <div class="container">
