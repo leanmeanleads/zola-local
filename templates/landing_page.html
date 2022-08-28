@@ -33,9 +33,9 @@
 
 {% block footer %}
 
-{% if config.extra.clients and page.extra.work %}
-  {% for client in config.extra.clients %}
-    {% if client.work == page.extra.work %}
+{% if config.extra.specialist_clients and page.extra.specialism %}
+  {% for client in config.extra.specialist_clients %}
+    {% if client.specialism == page.extra.specialism %}
       {% set client_name = client.name %}
       {% set client_address = client.address %}
     {% endif %}

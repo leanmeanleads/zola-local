@@ -1,5 +1,5 @@
-{% if config.extra.clients and page.extra.work %}
-  {% set path = path | replace(from="data/", to="data/" ~ page.extra.work ~ "/" ) -%}
+{% if config.extra.specialist_clients and page.extra.specialism %}
+  {% set path = path | replace(from="data/", to="data/" ~ page.extra.specialism ~ "/" ) -%}
 {% endif %}
 
 {% set services = load_data(path=path) -%}
