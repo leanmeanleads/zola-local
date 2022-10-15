@@ -15,7 +15,7 @@
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
               <script>
               Calendly.initInlineWidget({
-                url: 'https://calendly.com/{{ config.extra.calendly_booking_path | safe }}?hide_event_type_details=1'
+                url: 'https://calendly.com/{{ config.extra.calendly_booking_path | safe }}?hide_event_type_details=1&a1={{ config.extra.calendly_area_option_number }}'
               });
               </script>
             </div>
