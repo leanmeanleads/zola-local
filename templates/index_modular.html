@@ -13,7 +13,7 @@
     <title>
         {% block title %}
         {% if page.title %}
-            {{ page.title  }} | {{ config.extra.niche | capitalize }} {{ config.extra.location.town | capitalize }} {{ config.extra.location.state | capitalize}}
+            {{ page.title  }} | {{ config.extra.niche }} {{ config.extra.location.town | capitalize }} {{ config.extra.location.state | capitalize}}
         {% else %}
             {{ config.title }}
         {% endif %}
