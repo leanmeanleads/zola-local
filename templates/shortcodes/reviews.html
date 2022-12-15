@@ -18,11 +18,17 @@
       </div>
       {% endfor %}
     </div> 
-    {% if show_phone_cta %}
+    {% if show_phone_cta and config.extra.phone_number.value %}
     <div class="row justify-content-center">
       <a href="tel:{{ config.extra.phone_number.value }}"
          class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Call Now {{ config.extra.phone_number.display_value }}</a>
     </div>
+    {% else %}
+    <div class="row justify-content-center">
+      <a href="#get-a-free-quote"
+        class="col-lg-6 col-md-8 col-sm-12 m-1 px-3 py-2 btn btn-lg btn-primary">Get a
+        Quote</a>
+        </div>
     {% endif %}
   </div>
 </section>
